@@ -1,0 +1,8 @@
+// Container
+//
+.container {
+  display: flow-root;
+  max-width: $breakpoint-lg;
+  margin-inline: auto;
+  padding-inline: $spacing-md;
+}

@@ -1,0 +1,52 @@
+@import "@/assets/scss/variables";
+
+.headerWrapper {
+  width: 100%;
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+}
+
+.headerNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    a {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: $spacing-xs;
+      color: $dark-color;
+      font-weight: $font-semibold;
+      padding: $spacing-xs;
+      border-radius: $border-radius;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        background-color: $light-color;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.headerSearch {
+  display: flex;
+  min-width: 300px;
+}

@@ -1,0 +1,33 @@
+@import "@/assets/scss/variables";
+
+.notFound {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: $spacing-md;
+
+  &__error {
+    font-size: $font-size-base;
+    color: $primary-color;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__title {
+    color: $dark-color;
+    font-size: $font-size-h1;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__link {
+    color: $primary-color;
+  }
+}

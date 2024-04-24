@@ -1,0 +1,39 @@
+@import "@/assets/scss/variables";
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+
+  &__animation {
+    display: block;
+    width: 45px;
+    height: 40px;
+    $c: linear-gradient($primary-color 0 0);
+    background: $c 0% 100%, $c 50% 100%, $c 100% 100%;
+    background-size: 9px 100%;
+    background-repeat: no-repeat;
+    animation: anime 1s infinite linear;
+  }
+
+  &__text {
+    color: $dark-color;
+  }
+}
+
+@keyframes anime {
+  20% {
+    background-size: 9px 60%, 9px 100%, 9px 100%;
+  }
+  40% {
+    background-size: 9px 80%, 9px 60%, 9px 100%;
+  }
+  60% {
+    background-size: 9px 100%, 9px 80%, 9px 60%;
+  }
+  80% {
+    background-size: 9px 100%, 9px 100%, 9px 80%;
+  }
+}

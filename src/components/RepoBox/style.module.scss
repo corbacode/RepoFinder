@@ -1,0 +1,40 @@
+@import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
+
+.repoBox {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  &__title {
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &hover {
+        color: lighten($primary-color, 10%);
+      }
+    }
+  }
+
+  &__desciption {
+    @include text-truncate(2); // truncate text after 2 line
+  }
+
+  &__tags {
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    & .tag {
+      font-size: $font-size-sm;
+
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

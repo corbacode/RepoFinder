@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Colors */
+$primary-color: #4f46e5;
+$light-color: #f9fafb;
+$dark-color: #111827;
+$text-color: #4b5563;
+$white-color: #fff;
+
+/* Typography */
+$font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$font-size-sm: 0.875rem;
+$line-height-sm: 1.25;
+$font-semibold: 600;
+
+/* Heading Sizes */
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+/* Spacing */
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+/* Border */
+$border-radius: 0.25rem;
+$border-width: 1px;
+$border-color: #d1d5db;
+
+/* Shadows */
+$box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+$box-shadow-input: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+/* Breakpoints */
+$breakpoint-xs: 640px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;

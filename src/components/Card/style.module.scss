@@ -1,0 +1,39 @@
+@import "@/assets/scss/variables";
+
+.card {
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  color: $dark-color;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-md;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    font-weight: $font-semibold;
+    letter-spacing: -0.025em;
+    font-size: $font-size-base;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    color: $text-color;
+  }
+
+  &__content {
+    padding: $spacing-md;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    padding: $spacing-md;
+    padding-top: 0;
+  }
+}

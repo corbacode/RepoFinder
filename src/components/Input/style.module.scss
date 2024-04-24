@@ -1,0 +1,30 @@
+@import "@/assets/scss/variables";
+
+.inputbox {
+  display: flex;
+  flex-grow: 1;
+  background-color: $white-color;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-input;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  outline: none;
+  padding-block: $spacing-xs;
+  padding-inline: $spacing-sm;
+  border-radius: $border-radius;
+  color: $dark-color;
+
+  &:focus {
+    border-color: $dark-color;
+  }
+  &:disabled {
+    background-color: $light-color !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: $text-color;
+  }
+}
