@@ -1,5 +1,6 @@
-import { SearchProvider } from "./contexts/SearchContext";
+import "@/assets/scss/style.scss";
 import AppRoutes from "./routes";
+import { SearchProvider } from "./contexts/SearchContext";
 
 export default function App() {
   return (

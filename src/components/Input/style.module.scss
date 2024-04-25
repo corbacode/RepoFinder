@@ -16,7 +16,7 @@
   color: $dark-color;
 
   &:focus {
-    border-color: $dark-color;
+    border-color: $primary-color;
   }
   &:disabled {
     background-color: $light-color !important;

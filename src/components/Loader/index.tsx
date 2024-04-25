@@ -1,6 +1,6 @@
 import style from "./style.module.scss";
 
-const Loader = () => {
+export const Loader = () => {
   return (
     <div className={style.loader}>
       <span className={style.loader__animation}></span>
@@ -8,5 +8,3 @@ const Loader = () => {
     </div>
   );
 };
-
-export { Loader };

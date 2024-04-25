@@ -8,7 +8,7 @@ import { getRepoList } from "@/services/GitHub";
 
 // import components
 import { useParams } from "react-router-dom";
-import { PageLoader } from "@/components/PageLoader";
+import PageLoader from "@/components/PageLoader";
 import { RepoList } from "@/components/RepoList";
 
 function PageContent() {

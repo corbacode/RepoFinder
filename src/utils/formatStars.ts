@@ -1,4 +1,3 @@
 export default function formatStars(stars: number) {
-  if (stars >= 1000) return (stars / 1000).toFixed(1) + "K";
-  return stars.toString();
+  return stars >= 1000 ? (stars / 1000).toFixed(1) + "K" : stars.toString();
 }

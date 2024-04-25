@@ -1,73 +1,31 @@
-import { forwardRef } from "react";
-import cm from "@/utils/classesMerge";
 import style from "./style.module.scss";
-
-// Define the TypeScript type object
-type CardProps = React.HTMLAttributes<HTMLDivElement>;
+import { createElement } from "@/utils/createElement";
 
 // Card Component
 //
-const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", ...props }, ref) => {
-    return <div ref={ref} className={cm(style.card, className)} {...props} />;
-  }
-);
-Card.displayName = "Card";
+export const Card = (props: any) => createElement(props, style.card);
 
 // Card Header
 //
-const CardHeader = forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", ...props }, ref) => (
-    <div ref={ref} className={cm(style.card__header, className)} {...props} />
-  )
-);
-CardHeader.displayName = "CardHeader";
+export const CardHeader = (props: any) =>
+  createElement(props, style.card__header);
 
 // Card Title
 //
-const CardTitle = forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", ...props }, ref) => (
-    <h3 ref={ref} className={cm(style.card__title, className)} {...props} />
-  )
-);
-CardTitle.displayName = "CardTitle";
+export const CardTitle = (props: any) =>
+  createElement(props, style.card__title, "h3");
 
 // Card Description
 //
-const CardDescription = forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cm(style.card__description, className)}
-      {...props}
-    />
-  )
-);
-CardDescription.displayName = "CardDescription";
+export const CardDescription = (props: any) =>
+  createElement(props, style.card__description);
 
 // Card Content
 //
-const CardContent = forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", ...props }, ref) => (
-    <div ref={ref} className={cm(style.card__content, className)} {...props} />
-  )
-);
-CardContent.displayName = "CardContent";
+export const CardContent = (props: any) =>
+  createElement(props, style.card__content);
 
 // Card Footer
 //
-const CardFooter = forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", ...props }, ref) => (
-    <div ref={ref} className={cm(style.card__footer, className)} {...props} />
-  )
-);
-CardFooter.displayName = "CardFooter";
-
-export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-};
+export const CardFooter = (props: any) =>
+  createElement(props, style.card__footer);

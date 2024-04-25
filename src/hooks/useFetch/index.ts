@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import CONFIG from "@/config";
+
+const DefaultAPI = CONFIG.APP.API_URL;
 
 export type FetchTypes<T> = {
   loading: boolean;
@@ -8,9 +10,12 @@ export type FetchTypes<T> = {
   data: T | null;
 };
 
+type Query = Record<string, string> | {};
+
 export default function useFetch<T>(
   url: string,
-  queryParams?: Record<string, string>
+  queryParams?: Query,
+  API: string = DefaultAPI
 ): FetchTypes<T> {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -20,11 +25,17 @@ export default function useFetch<T>(
     ? new URLSearchParams(queryParams).toString()
     : "";
 
+  // Avoiding unnecessary re-fetches for the same API call with identical arguments.
+  const fetchKey = useMemo(
+    () => ({ url, queryString, API }),
+    [url, queryString, API]
+  );
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${CONFIG.APP.API_URL}/${url}${queryString ? `?${queryString}` : ""}`
+          `${API}/${url}${queryString ? `?${queryString}` : ""}`
         );
 
         if (!response.ok) {
@@ -40,7 +51,7 @@ export default function useFetch<T>(
       }
     };
     fetchData();
-  }, [url, queryString]);
+  }, [fetchKey]); // Use the memoization key as dependency
 
   return { data, loading, error };
 }

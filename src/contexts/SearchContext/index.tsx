@@ -5,6 +5,10 @@ interface ISearch {
   setSearchQuery: (q: any) => void;
 }
 
+interface IProvider {
+  children: React.ReactNode;
+}
+
 export const SearchContext = createContext<ISearch | null>(null);
 
 export const useSearchContext = () => {
@@ -15,7 +19,7 @@ export const useSearchContext = () => {
   return context;
 };
 
-export function SearchProvider({ children }: { children: React.ReactNode }) {
+export function SearchProvider({ children }: IProvider) {
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
 
   return (

@@ -5,7 +5,6 @@ export function useForm(opt?: any) {
 
   const handleForm = (propName: string, callBack?: Function) => {
     return (e: React.ChangeEvent<HTMLInputElement>) => {
-      e.preventDefault();
       setData({ ...data, [propName]: e.target?.value });
 
       if (callBack) callBack(data);

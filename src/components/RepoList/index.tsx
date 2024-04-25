@@ -2,10 +2,8 @@ import { RepoBox } from "../RepoBox";
 
 import style from "./style.module.scss";
 
-const RepoList = ({ data, error }: any) => {
-  const { total_count, incomplete_results, items } = data;
-
-  console.log(total_count, incomplete_results);
+export const RepoList = ({ data, error }: any) => {
+  const { items } = data;
 
   return (
     <div className={style.repoList}>
@@ -17,5 +15,3 @@ const RepoList = ({ data, error }: any) => {
     </div>
   );
 };
-
-export { RepoList };

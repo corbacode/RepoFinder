@@ -10,6 +10,7 @@
     a {
       color: $primary-color;
       text-decoration: none;
+      @include text-truncate(1);
 
       &hover {
         color: lighten($primary-color, 10%);
@@ -24,6 +25,7 @@
   &__tags {
     flex-wrap: wrap;
     gap: $spacing-md;
+    margin-top: auto;
 
     & .tag {
       font-size: $font-size-sm;

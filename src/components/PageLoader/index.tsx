@@ -1,3 +1,4 @@
+import React from "react";
 import { Loader } from "../Loader";
 
 type Props = {
@@ -7,9 +8,7 @@ type Props = {
 };
 
 const PageLoader = ({ loading, children, className }: Props) => {
-  return (
-    <>{loading ? <Loader /> : <div className={className}>{children}</div>}</>
-  );
+  return loading ? <Loader /> : <div className={className}>{children}</div>;
 };
 
-export { PageLoader };
+export default React.memo(PageLoader);
