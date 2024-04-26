@@ -70,7 +70,7 @@ npm run test
 
 This command will execute all unit tests located in the `src/__tests__` directory using Vitest. Unit tests focus on testing individual units or components in isolation, such as functions, components, or modules.
 
-##Usage
+## Usage
 
 - **Development Mode:** During development, you can use hot module replacement (HMR) to see your changes instantly without reloading the page. Simply make edits to your files, and the browser will update automatically.
 - **Production Build:** Before deploying your application to production, run `npm run build` to generate a production-optimized build. You can then serve this build using npm run serve.
