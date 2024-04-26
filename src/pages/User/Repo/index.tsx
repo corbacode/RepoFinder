@@ -9,6 +9,7 @@ import style from "./style.module.scss";
 import Badge from "@/components/Badge";
 import { Picture } from "@/components/Picture";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   IcoChat,
   IcoCode,
@@ -118,7 +119,7 @@ const RepoReadme = (props: any) => {
       <div className={style.repoReadme}>
         <article>
           <h3>README.MD</h3>
-          <Markdown>{markdown}</Markdown>
+          <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
         </article>
       </div>
     </PageLoader>
