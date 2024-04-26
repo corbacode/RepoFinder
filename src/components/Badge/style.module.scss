@@ -1,0 +1,35 @@
+@import "@/assets/scss/variables";
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: fit-content;
+  border-radius: $border-radius;
+  border: $border-width solid transparent;
+  padding-block: 2px;
+  padding-inline: $spacing-sm;
+  font-weight: $font-semibold;
+  font-size: $font-size-sm;
+  gap: 4px;
+
+  &__default {
+    background-color: $light-color;
+    color: $dark-color;
+  }
+  &__secondary {
+    background-color: $dark-color;
+    color: $white-color;
+  }
+  &__primary {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  &__outline {
+    border-color: $border-color;
+    background-color: $white-color;
+    color: $text-color;
+  }
+}

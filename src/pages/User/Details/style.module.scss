@@ -1,0 +1,86 @@
+@import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
+
+.userLayout {
+  display: grid;
+  grid-template-columns: minmax(100px, 3fr);
+  gap: $spacing-md;
+
+  @include media-md() {
+    grid-template-columns: 1fr minmax(100px, 3fr);
+  }
+}
+
+.userRepos {
+  h4 {
+    margin: 0;
+    font-size: $font-size-h4;
+  }
+}
+
+.vcardItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: $font-size-sm;
+
+  svg {
+    width: $font-size-base;
+    height: $font-size-base;
+  }
+}
+
+.userVcard {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &__avatar {
+    border-radius: $border-radius;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      color: $primary-color;
+      margin: 0;
+    }
+
+    svg {
+      width: $font-size-base;
+      height: $font-size-base;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: $spacing-xs;
+      font-weight: normal;
+    }
+  }
+
+  &__follow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+
+    div {
+      font-weight: normal;
+    }
+
+    svg {
+      width: $font-size-base;
+      height: $font-size-base;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+}

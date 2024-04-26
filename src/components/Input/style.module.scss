@@ -6,7 +6,6 @@
   background-color: $white-color;
   border: $border-width solid $border-color;
   border-radius: $border-radius;
-  box-shadow: $box-shadow-input;
   font-size: $font-size-sm;
   line-height: $line-height-sm;
   outline: none;
@@ -17,6 +16,7 @@
 
   &:focus {
     border-color: $primary-color;
+    outline: none;
   }
   &:disabled {
     background-color: $light-color !important;

@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 
 import CONFIG from "@/config";
-
 const DefaultAPI = CONFIG.APP.API_URL;
 
 export type FetchTypes<T> = {
@@ -12,6 +11,18 @@ export type FetchTypes<T> = {
 
 type Query = Record<string, string> | {};
 
+/**
+ * Custom React hook for fetching data from an API endpoint.
+ * @template T - The type of data fetched from the API.
+ * @param {string} url - The endpoint URL to fetch data from.
+ * @param {Record<string, string> | {}} [queryParams] - Optional query parameters for the request.
+ * @param {string} [API] - The base API URL. Defaults to the value provided in CONFIG.APP.API_URL.
+ * @returns {{
+ *   data: T | null; // The fetched data, null if not yet loaded or if an error occurred.
+ *   loading: boolean; // Boolean indicating if the data is being loaded.
+ *   error: Error | null; // Any error that occurred during the fetch process, null if no error.
+ * }}
+ */
 export default function useFetch<T>(
   url: string,
   queryParams?: Query,
@@ -42,8 +53,15 @@ export default function useFetch<T>(
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const responseData: T = await response.json();
-        setData(responseData);
+        const contentType = response.headers.get("Content-Type");
+
+        if (contentType?.includes("json")) {
+          const responseData: T = await response.json();
+          setData(responseData);
+        } else {
+          const textData: string = await response.text();
+          setData(textData as T);
+        }
       } catch (error: any) {
         setError(error);
       } finally {

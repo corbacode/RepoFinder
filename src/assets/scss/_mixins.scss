@@ -7,3 +7,35 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+// Large screen and bigger
+//
+@mixin media-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Desktop and bigger
+//
+@mixin media-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+// Tablet landscape and bigger
+//
+@mixin media-sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+// Phone landscape and bigger
+//
+@mixin media-xs {
+  @media (min-width: $breakpoint-xs) {
+    @content;
+  }
+}

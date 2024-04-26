@@ -1,7 +1,9 @@
 @import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
 
 .logo {
   display: flex;
+
   a {
     text-decoration: none;
     display: inline-flex;
@@ -26,6 +28,13 @@
         animation-iteration-count: 3;
         animation-timing-function: linear;
       }
+    }
+  }
+
+  span {
+    display: none;
+    @include media-xs() {
+      display: block;
     }
   }
 }

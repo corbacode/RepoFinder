@@ -1,6 +1,15 @@
-/// <reference types="vite-plugin-svgr/client" />
-
 export { default as IcoHome } from "@/assets/svg/home.svg?react";
 export { default as IcoSearch } from "@/assets/svg/search.svg?react";
 export { default as IcoLogo } from "@/assets/svg/logo.svg?react";
 export { default as IcoStar } from "@/assets/svg/star.svg?react";
+export { default as IcoLink } from "@/assets/svg/link.svg?react";
+export { default as IcoEye } from "@/assets/svg/eye.svg?react";
+export { default as IcoHashtag } from "@/assets/svg/hashtag.svg?react";
+export { default as IcoUsers } from "@/assets/svg/users.svg?react";
+export { default as IcoCode } from "@/assets/svg/code.svg?react";
+export { default as IcoChat } from "@/assets/svg/chat.svg?react";
+export { default as IcoUser } from "@/assets/svg/user.svg?react";
+export { default as IcoUpdate } from "@/assets/svg/update.svg?react";
+export { default as IcoBookmark } from "@/assets/svg/bookmark.svg?react";
+export { default as IcoMap } from "@/assets/svg/map.svg?react";
+export { default as IcoPen } from "@/assets/svg/pen.svg?react";

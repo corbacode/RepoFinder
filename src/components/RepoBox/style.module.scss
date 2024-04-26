@@ -27,16 +27,14 @@
     gap: $spacing-md;
     margin-top: auto;
 
-    & .tag {
+    svg {
+      width: $font-size-base;
+      height: $font-size-base;
+    }
+
+    div {
       font-size: $font-size-sm;
-
-      display: flex;
-      align-items: center;
-
-      svg {
-        width: 16px;
-        height: 16px;
-      }
+      font-weight: normal;
     }
   }
 }

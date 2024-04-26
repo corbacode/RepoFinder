@@ -1,0 +1,56 @@
+@import "@/assets/scss/variables";
+
+.textAnimate {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0;
+
+  svg {
+    font-family: $font-family;
+    width: 100%;
+    height: 48px;
+    font-weight: bolder;
+  }
+  svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: $primary-color;
+    font-size: 48px;
+    font-weight: bolder;
+  }
+  p {
+    font-weight: $font-semibold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(9, 105, 218, 0);
+    stroke: $primary-color;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(9, 105, 218, 0);
+    stroke: $primary-color;
+  }
+  80% {
+    fill: rgba(9, 105, 218, 0);
+    stroke: $primary-color;
+    stroke-width: 3;
+  }
+  100% {
+    fill: $primary-color;
+    stroke: rgba(9, 105, 218, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}

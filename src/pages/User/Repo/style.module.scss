@@ -1,0 +1,170 @@
+@import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
+
+.repoHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+  padding-bottom: $spacing-sm;
+  border-bottom: $border-width solid $border-color;
+}
+
+.repoTitle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-items: center;
+  gap: $spacing-sm;
+
+  picture {
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius;
+    border: $border-width solid $border-color;
+  }
+
+  h3 {
+    font-weight: $font-semibold;
+    letter-spacing: -0.025em;
+    font-size: $font-size-h5;
+    margin: 0;
+  }
+}
+
+.repoDetails {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  align-items: center;
+  gap: $spacing-sm;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  strong {
+    font-weight: $font-semibold;
+  }
+}
+
+.repoContent {
+  display: grid;
+  grid-template-columns: minmax(100px, 3fr);
+  padding-top: $spacing-md;
+  gap: $spacing-md;
+
+  @include media-md() {
+    grid-template-columns: minmax(100px, 3fr) 1fr;
+  }
+}
+
+.repoLayoutMain {
+  display: flex;
+  flex-direction: column;
+  max-width: auto;
+}
+
+.repoLayoutSidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.repoReadme {
+  background-color: $light-color;
+  padding: $spacing-md;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    border-bottom: $border-width solid $border-color;
+    padding-bottom: $spacing-xs;
+    margin: 0 0 $spacing-md 0;
+  }
+
+  display: none;
+
+  @include media-md() {
+    display: block;
+  }
+}
+
+.repoAbout {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  & * {
+    margin: 0;
+  }
+
+  p {
+    font-size: $font-size-sm;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-size: $font-size-sm;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__topics {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__language {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}
+
+.repoOverview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+  padding-bottom: $spacing-md;
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-xs;
+    flex-grow: 0;
+
+    svg {
+      width: $font-size-base;
+      height: $font-size-base;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+}

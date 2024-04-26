@@ -12,6 +12,7 @@ import { IcoStar } from "@/enums/Icons";
 import { Link } from "react-router-dom";
 import InternalLinks from "@/enums/InternalLinks";
 import parseUserAndRepo from "@/utils/parseUserAndRepo";
+import Badge from "../Badge";
 
 const RepoHeader = (props: any) => {
   const { full_name, description } = props;
@@ -34,14 +35,14 @@ const RepoTags = (props: any) => {
   const { language, visibility, stargazers_count } = props;
   return (
     <CardFooter className={style.repoBox__tags}>
-      {language && <span className={style.tag}>{language}</span>}
-      {stargazers_count && (
-        <span className={style.tag}>
+      {language && <Badge variant="outline">{language}</Badge>}
+      {stargazers_count > 0 && (
+        <Badge variant="secondary">
           <IcoStar />
           {formatStars(stargazers_count)}
-        </span>
+        </Badge>
       )}
-      {visibility && <span className={style.tag}>{visibility}</span>}
+      {visibility && <Badge className={style.tag}>{visibility}</Badge>}
     </CardFooter>
   );
 };

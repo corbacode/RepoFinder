@@ -8,7 +8,7 @@ export const Logo = () => {
     <div className={style.logo}>
       <Link to={InternalLinks.HOME}>
         <IcoLogo />
-        <span>Repo Finer</span>
+        <span>Repo Finder</span>
       </Link>
     </div>
   );

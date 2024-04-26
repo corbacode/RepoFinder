@@ -1,3 +1,9 @@
+/**
+ * Formats the given date string into a human-readable relative time string.
+ *
+ * @param {string} dateString - The date string to format.
+ * @returns {string} - The formatted relative time string.
+ */
 export default function formatDate(dateString: string): string {
   const date = new Date(dateString);
   const now = new Date();

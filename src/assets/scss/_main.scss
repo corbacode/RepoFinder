@@ -20,3 +20,17 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: $border-width solid $border-color;
+}

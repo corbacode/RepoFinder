@@ -22,7 +22,11 @@ function PageContent() {
   return (
     <PageLoader loading={loading}>
       <div className="container">
-        <RepoList data={data} error={error} />
+        {data?.total_count ? (
+          <RepoList data={data?.items} error={error} />
+        ) : (
+          <h4>No Search Result</h4>
+        )}
       </div>
     </PageLoader>
   );
